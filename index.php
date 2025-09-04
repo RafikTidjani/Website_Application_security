@@ -213,7 +213,7 @@ $byDept = $pdo->query("
   </div>
 
   <footer class="mt-4 text-center text-muted small">
-    Dashboard lecture seule • KPIs calculés en SQL • Boutons d’accès rapide
+    exercice 2 injection sql
   </footer>
 </div>
 </body>
