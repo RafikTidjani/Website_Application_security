@@ -9,7 +9,7 @@ Mini-application web en **PHP + PDO + Bootstrap** pour gérer :
 
 ---
 
-## ⚙️ Prérequis
+##  Prérequis
 
 - Serveur web local : **XAMPP**, **WAMP** ou **MAMP** (Apache + PHP + MySQL/MariaDB)
 - PHP 8+
@@ -17,7 +17,7 @@ Mini-application web en **PHP + PDO + Bootstrap** pour gérer :
 
 ---
 
-## 📥 Installation
+##  Installation
 
 1. **Cloner le projet**
    ```bash
@@ -159,11 +159,12 @@ $DB_PORT = '3306';
 $DB_NAME = 'bdd_securisation';
 $DB_USER = 'root';
 $DB_PASS = ''; // mot de passe (souvent vide sous XAMPP/WAMP)
-🚀 Utilisation
+
+ Utilisation
 Lancer Apache + MySQL depuis XAMPP/WAMP/MAMP
 
 Ouvrir dans le navigateur :
-👉 http://localhost/Website_Application_security/index.php
+http://localhost/Website_Application_security/index.php
 
 Tu arrives sur le dashboard avec :
 
@@ -179,7 +180,7 @@ assignments.php → gérer les affectations
 
 projects_view.php → consulter les projets en cours
 
-📂 Structure
+ Structure
 index.php → Dashboard + liens
 
 employees.php → CRUD employés
