@@ -38,16 +38,14 @@ Dans l’onglet SQL, coller le script ci-dessous et exécuter :
 
 sql
 Copier le code
--- Création de la base
+
+
 CREATE DATABASE IF NOT EXISTS bdd_securisation
   DEFAULT CHARACTER SET utf8mb4
   COLLATE utf8mb4_general_ci;
 
 USE bdd_securisation;
 
--- ========================
--- Table Employés
--- ========================
 DROP TABLE IF EXISTS Emp;
 CREATE TABLE Emp (
     idEmp INT AUTO_INCREMENT PRIMARY KEY,
@@ -58,9 +56,7 @@ CREATE TABLE Emp (
     FOREIGN KEY (mgrEmp) REFERENCES Emp(idEmp) ON DELETE SET NULL
 ) ENGINE=InnoDB;
 
--- ========================
--- Table Projets
--- ========================
+
 DROP TABLE IF EXISTS Proj;
 CREATE TABLE Proj (
     nomProj VARCHAR(100) PRIMARY KEY,
@@ -70,9 +66,7 @@ CREATE TABLE Proj (
     FOREIGN KEY (mgrProj) REFERENCES Emp(idEmp) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- ========================
--- Table Affectations
--- ========================
+
 DROP TABLE IF EXISTS EmpProj;
 CREATE TABLE EmpProj (
     idEmp INT NOT NULL,
@@ -84,9 +78,6 @@ CREATE TABLE EmpProj (
     FOREIGN KEY (nomProj) REFERENCES Proj(nomProj) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- ========================
--- Jeu de données : Employés
--- ========================
 INSERT INTO Emp (nomEmp, salEmp, mgrEmp, deptEmp) VALUES
 ('Alice Martin', 3200.00, NULL, 'Informatique'),
 ('Bruno Dupont', 3500.00, 1, 'Informatique'),
@@ -109,9 +100,9 @@ INSERT INTO Emp (nomEmp, salEmp, mgrEmp, deptEmp) VALUES
 ('Sophie Lambert', 2600.00, 18, 'RH'),
 ('Thomas Blanchard', 3500.00, 2, 'Informatique');
 
--- ========================
+
 -- Jeu de données : Projets
--- ========================
+
 INSERT INTO Proj (nomProj, mgrProj, budget, dateDebut) VALUES
 ('Migration ERP', 2, 50000.00, '2024-01-15'),
 ('Audit Financier', 5, 30000.00, '2024-03-01'),
@@ -124,9 +115,9 @@ INSERT INTO Proj (nomProj, mgrProj, budget, dateDebut) VALUES
 ('Migration Cloud', 2, 60000.00, '2024-09-01'),
 ('Site E-commerce', 10, 55000.00, '2024-10-01');
 
--- ========================
+
 -- Jeu de données : Affectations
--- ========================
+
 INSERT INTO EmpProj (idEmp, nomProj, heures, evalEmp) VALUES
 (2, 'Migration ERP', 120.50, 85),
 (3, 'Migration ERP', 95.00, 90),
