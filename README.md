@@ -2,9 +2,9 @@
 
 Mini-application web en **PHP + PDO + Bootstrap** pour gérer :
 
-- Les **employés** (CRUD)
-- Les **projets** (CRUD)
-- Les **affectations** Employé ↔ Projet (CRUD)
+- Les **employés** 
+- Les **projets** 
+- Les **affectations** Employé ↔ Projet
 - Un **dashboard d’accueil** avec statistiques et vues globales
 
 ---
